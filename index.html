@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8-Ball</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar with JP, EN links and Music Button -->
+    <nav>
+        <a href="index.html" class="active">English</a>
+        <a href="indexjp.html" class="">日本語</a> <!-- Link to Japanese Page -->
+        <button id="music-btn" onclick="toggleMusic()">Pause Music</button>
+    </nav>
+
+    <div class="container">
+        <h1>Magic 8-Ball!</h1>
+
+         <!-- Magic 8 Ball created with CSS -->
+        <div class="magic-8-ball">
+            <div class="ball">
+                <div class="triangle">▲</div>
+            </div>
+        </div>
+
+        <p>I can see the future... Ask me anything if you dare!</p>
+        
+        <form id="question-form" onsubmit="submitQuestion(event)">
+            <input type="text" name="question" placeholder="Ask your question here..." required>
+            <input type="submit" value="Ask the Magic 8-Ball">
+        </form>
+    </div>
+
+    <!-- Audio Player-->
+    <audio id="bg-music" loop autoplay>
+        <source src="FortuneTeller.mp3" type="audio/mp3">  <!-- Path to MP3 file in the same folder -->
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+</html>
